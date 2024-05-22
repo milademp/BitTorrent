@@ -65,7 +65,7 @@ iptables-save > /etc/iptables/rules.v4
 
 # Enable UFW
 echo "Enabling UFW..."
-ufw enable
+sudo ufw enable
 
 # Add the service file
 echo "[Unit]
@@ -80,11 +80,12 @@ ExecStart=/bin/bash /root/abuse.sh
 WantedBy=multi-user.target" | sudo tee /etc/systemd/system/firewall-setup.service > /dev/null
 
 # Reload systemd to load the new service file
-systemctl daemon-reload
+sudo systemctl daemon-reload
+echo "Reloading systemd..."
 
 # Enable and start the service
-systemctl enable firewall-setup.service
-systemctl start firewall-setup.service
+sudo systemctl enable firewall-setup.service
+echo "Enabling the service..."
 
 # Finish
 echo "Script execution completed successfully."
