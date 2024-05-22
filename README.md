@@ -1,2 +1,4 @@
-# BitTorrent
-Hetzner
+# Block All Range IP/s BitTorrent (Hetzner)
+
+
+
