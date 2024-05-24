@@ -61,7 +61,7 @@ echo "Blocking outgoing traffic to specified IP ranges on port $port_number is c
 
 # Save iptables rules
 echo "Saving iptables rules..."
-iptables-saves
+iptables-save
 
 # Enable UFW
 echo "Enabling UFW..."
